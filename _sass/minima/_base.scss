@@ -82,10 +82,16 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-weight: bold; // $base-font-weight;
+	color: #555;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
+h2 .post-link {
+  font-size: 34px;
+  opacity: 0.8;
+}
 
 /**
  * Links
@@ -139,7 +145,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: hsl(240, 0%, 96.7%); // #eef;
 }
 
 code {
