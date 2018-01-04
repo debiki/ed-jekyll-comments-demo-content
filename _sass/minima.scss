@@ -47,3 +47,8 @@ $on-laptop:        800px !default;
   "minima/layout",
   "minima/syntax-highlighting"
 ;
+
+.highlighter-rouge .highlight {
+    background: hsl(240, 0%, 96.7%);  // instead of blue
+}
+
