@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Demo and installation instructions"
-date:   2018-01-02 10:05:04 +0000
-discussion_id: installation-instructions
+date:   2018-01-09 07:00:00 +0000
+discussion_id: demo-and-inst-instrs
 ---
 
-This is a new commenting system for Jekyll and other static site generators. It's called ed-comments (ed = Effective Discussions) and it's [open source](https://github.com/debiki/ed-server/) so you can install it for free on your own server. There's hosting too, so it's serverless. No ads, no tracking. Lightweight, just 140 kb javascript (in comparison to Disqus' about 750 kb).
+This is a new commenting system for Jekyll and other static site generators. It's called ed-comments (ed = Effective Discussions — but maybe I'll rename it to Uttertalk) and it's [open source](https://github.com/debiki/ed-server/) so you can install it for free on your own server. There's hosting too, if you don't want to maintain your own server. No ads, no tracking. Lightweight, just 140 kb javascript (in comparison to Disqus' about 750 kb).
 
-This website is a static Jekyll blog, with ed-comments below each blog post.
+This website is a static Jekyll blog, with ed-comments below each blog post — look at the bottom of the pages.
 
 Demo video:
 
@@ -21,12 +21,16 @@ Demo video:
 -->
 
 <br>
+<a href="/jekyll/update/2018/01/01/like-about-jekyll.html">Here's a demo Jekyll discussion.</a>
+
+<a href="https://www.kajmagnus.blog/new-embedded-comments">Longer demo discussion (the one in the video).</a>
+<br>
+<br>
 
 ### Quick test if this is for you
 
 Maybe you don't want to get a server and install, or sign up for our hosted service,
 just to find out if ed-comments works for your blog / website?
-
 Here're 3 quick steps for you to try out ed-comments:
 
 1. Add this to your `_config.yml` file:
@@ -35,36 +39,35 @@ Here're 3 quick steps for you to try out ed-comments:
    ed_comments_server_url: https://comments.demo.ed.community
    ```
 
-2. Do real installation step 3 below, i.e. add the `_include/ed-comments.html` file.
+2. Do real installation step 3 below, i.e. add the `_includes/ed-comments.html` file.
 
 3. Do real installation step 4 below, i.e. start including that file.
 
-Now, regenerate your blog and look at the comment section that shoud now appear below the blog posts.
-Are you satisfied with how it looks? If not, please tell us/me: <https://www.ed.community/forum/> :- P.
-Currently the comment section background color is always white, but later on you'll be able to tweak how it looks.
+Now, regenerate your blog and look at the comment section that should appear below the blog posts. You can post test comments **but** they'll disappear later on, some day. Currently the comment section background color is always white, but later on you'll be able to tweak how it looks.
 
-You can post test comments **but** they'll disappear later on some day.
+Are you satisfied with how it looks? If not, please tell us/me: <https://www.ed.community/forum/latest/support>.
 
-If you like it, then do real-installation-step-1 below, and step 2 again, but this time, specify the
-address to your own ed-comments site.
-
+If you like it, then do real installation step 1 below, and step 2 again — and this time, specify the address to your own ed-comments site. (Skip step 3 and 4, you've done them already.)
+<br>
+<br>
 
 ### Real installation
 
 Install this commenting system in four steps:
 
-1. Go to <https://www.ed.community> and click Create Community, choose Blog Comments and type your website address.
+1. Go to <https://www.ed.community> and click *Start a Community*, choose Blog Comments and type your website address.
    Copy the address to your new embedded comments site.
 
-2. Then, in your Jekyll site configuration, i.e. `_config.yml`, add a config value and paste the address, like so:
+2. In your Jekyll site configuration, i.e. `_config.yml`, add this config value and paste the address:
 
    ```
    ed_comments_server_url: https://comments-for-your-site.ed.community
    ```
 
-3. Create a file `_includes/ed-comments.html`:
+3. Create a file `_includes/ed-comments.html`: (TEST001 is intentional)
    {% raw %}
    ```
+   TEST001
    {% if site.ed_comments_server_url %}
    {% capture script_url %}{%
      if site.ed_comments_script_url %}{{ site.ed_comments_script_url }}{%
@@ -77,7 +80,7 @@ Install this commenting system in four steps:
    <div class="ed-comments" data-discussion-id="{{ page.discussion_id }}" style="margin-top: 45px;">
    <noscript>Please enable Javascript to view comments.</noscript>
    <p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
-   <a href="https://www.effectivediscussions.org">Effective Discussions</a>.</p>
+   <a href="https://www.ed.community">Effective Discussions</a>.</p>
    </div>
    {% endif %}
    ```
@@ -91,9 +94,20 @@ Install this commenting system in four steps:
    ```
    {% endraw %}
 
+   If you don't have a `_layout/posts.html` file, that's because by default Jekyll hides it.
+   Read more here: <https://jekyllrb.com/docs/themes/#overriding-theme-defaults> about where
+   you'll find it (and you need to copy it to your directory).
+
 5. Optionally, add a frontmatter `discussion_id: per-discussion-id` to your blog posts / articles.
-   Then, you can change the URL to the page, without the discussion disappearing.
+   Then, you can change the URL to a blog post, without the discussion disappearing.
 
-You can ask for help in [the support forum][support-forum].
+Now, restart Jekyll and reload a blog post in the browser. Do you see a comments section now?
+If so, remove TEST001 above. If not — do you see TEST001? If you *do* see TEST001 but not the comments,
+then ask for help, see below. If you don't see TEST001, you added the comments code at the wrong place,
+or you're looking at the wrong page.
 
-[support-forum]: https://www.effectivediscussions.org/forum/latest/support
+You can ask for help in [the support forum][support-cat], and [suggest ideas][ideas-cat].
+Or post a comment below on this page (test comments are fine too).
+
+[support-cat]: https://www.ed.community/forum/latest/support
+[ideas-cat]: https://www.ed.community/forum/latest/ideas
