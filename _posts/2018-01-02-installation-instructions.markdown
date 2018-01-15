@@ -5,9 +5,11 @@ date:   2018-01-09 07:00:00 +0000
 discussion_id: demo-and-inst-instrs
 ---
 
-This is a new commenting system for Jekyll and other static site generators. It's called ed-comments (ed = Effective Discussions — but maybe I'll rename it to Uttertalk) and it's [open source](https://github.com/debiki/ed-server/) so you can install it for free on your own server. There's hosting too, if you don't want to maintain your own server. No ads, no tracking. Lightweight, just 140 kb javascript (in comparison to Disqus' about 750 kb).
+Talkyard is a new commenting system for Jekyll and other static site generators. It's [open source](https://github.com/debiki/ed-server/) so you can install it for free on your own server. There's hosting too, if you don't want to maintain your own server. No ads, no tracking. Lightweight, just 140 kb javascript (in comparison to Disqus' about 750 kb).
 
-This website is a static Jekyll blog, with ed-comments below each blog post — look at the bottom of the pages.
+This website is a static Jekyll blog, with Talkyard below each blog post — look at the bottom of the pages.
+
+**WAIT** a week — I'm renaming everything from EffectiveDiscussions to Talkyard. Scripts and links might be broken, until I'm done. Today is 2018-01-15. **/Wait.**
 
 Demo video:
 
@@ -30,57 +32,59 @@ Demo video:
 ### Quick test if this is for you
 
 Maybe you don't want to get a server and install, or sign up for our hosted service,
-just to find out if ed-comments works for your blog / website?
-Here're 3 quick steps for you to try out ed-comments:
+just to find out if Talkyard works for your blog / website?
+Here're 3 quick steps for you to try out Talkyard:
 
 1. Add this to your `_config.yml` file:
 
    ```
-   ed_comments_server_url: https://comments.demo.ed.community
+   talkyard_comments_server_url: https://comments.demo.talkyard.io
    ```
 
-2. Do real installation step 3 below, i.e. add the `_includes/ed-comments.html` file.
+2. Do real installation step 3 below, i.e. add the `_includes/talkyard-comments.html` file.
 
 3. Do real installation step 4 below, i.e. start including that file.
 
 Now, regenerate your blog and look at the comment section that should appear below the blog posts. You can post test comments **but** they'll disappear later on, some day. Currently the comment section background color is always white, but later on you'll be able to tweak how it looks.
 
-Are you satisfied with how it looks? If not, please tell us/me: <https://www.ed.community/forum/latest/support>.
+Are you satisfied with how it looks? If not, please tell us/me: <https://www.talkyard.io/forum/latest/support>.
 
-If you like it, then do real installation step 1 below, and step 2 again — and this time, specify the address to your own ed-comments site. (Skip step 3 and 4, you've done them already.)
+If you like it, then do real installation step 1 below, and step 2 again — and this time, specify the address to your own Talkyard site. (Skip step 3 and 4, you've done them already.)
 <br>
 <br>
 
 ### Real installation
 
+**WAIT** a week — I'm renaming everything from EffectiveDiscussions to Talkyard. Scripts and links might be broken, until I'm done. Today is 2018-01-15. **/Wait.**
+
 Install this commenting system in four steps:
 
-1. Go to <https://www.ed.community> and click *Start a Community*, choose Blog Comments and type your website address.
+1. Go to <https://www.talkyard.io> and click *Start a Community*, choose Blog Comments and type your website address.
    Copy the address to your new embedded comments site.
 
 2. In your Jekyll site configuration, i.e. `_config.yml`, add this config value and paste the address:
 
    ```
-   ed_comments_server_url: https://comments-for-your-site.ed.community
+   talkyard_comments_server_url: https://comments-for-your-site.talkyard.io
    ```
 
-3. Create a file `_includes/ed-comments.html`: (TEST001 is intentional)
+3. Create a file `_includes/talkyard-comments.html`: (TEST001 is intentional)
    {% raw %}
    ```
    TEST001
-   {% if site.ed_comments_server_url %}
+   {% if site.talkyard_comments_server_url %}
    {% capture script_url %}{%
-     if site.ed_comments_script_url %}{{ site.ed_comments_script_url }}{%
-     else %}{{ 'https://edc-49f8.kxcdn.com/-/ed-comments.min.js' }}{%
+     if site.talkyard_comments_script_url %}{{ site.talkyard_comments_script_url }}{%
+     else %}{{ 'https://tyc-49f8.kxcdn.com/-/talkyard-comments.min.js' }}{%
      endif %}{%
    endcapture %}
 
-   <script>edCommentsServerUrl='{{ site.ed_comments_server_url }}';</script>
+   <script>talkyardCommentsServerUrl='{{ site.talkyard_comments_server_url }}';</script>
    <script async defer src="{{ script_url }}"></script>
-   <div class="ed-comments" data-discussion-id="{{ page.discussion_id }}" style="margin-top: 45px;">
+   <div class="talkyard-comments" data-discussion-id="{{ page.discussion_id }}" style="margin-top: 45px;">
    <noscript>Please enable Javascript to view comments.</noscript>
    <p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
-   <a href="https://www.ed.community">Effective Discussions</a>.</p>
+   <a href="https://www.talkyard.io">Talkyard</a>.</p>
    </div>
    {% endif %}
    ```
@@ -90,7 +94,7 @@ Install this commenting system in four steps:
 
    {% raw %}
    ```
-   {% include ed-comments.html %}
+   {% include talkyard-comments.html %}
    ```
    {% endraw %}
 
@@ -109,5 +113,5 @@ or you're looking at the wrong page.
 You can ask for help in [the support forum][support-cat], and [suggest ideas][ideas-cat].
 Or post a comment below on this page (test comments are fine too).
 
-[support-cat]: https://www.ed.community/forum/latest/support
-[ideas-cat]: https://www.ed.community/forum/latest/ideas
+[support-cat]: https://www.talkyard.io/forum/latest/support
+[ideas-cat]: https://www.talkyard.io/forum/latest/ideas
