@@ -7,9 +7,7 @@ discussion_id: demo-and-inst-instrs
 
 Talkyard is a new commenting system for Jekyll and other static site generators. It's [open source](https://github.com/debiki/ed-server/) so you can install it for free on your own server. There's hosting too, if you don't want to maintain your own server. No ads, no tracking. Lightweight, just 140 kb javascript (in comparison to Disqus' about 750 kb).
 
-This website is a static Jekyll blog, with Talkyard below each blog post — look at the bottom of the pages.
-
-**WAIT** a week — I'm renaming everything from EffectiveDiscussions to Talkyard. Scripts and links might be broken, until I'm done. Today is 2018-01-15. **/Wait.**
+This website is a static Jekyll blog, with Talkyard comments below each blog post — look at the bottom of the pages.
 
 Demo video:
 
@@ -43,7 +41,7 @@ Here're 3 quick steps for you to try out Talkyard:
 
 2. Do real installation step 3 below, i.e. add the `_includes/talkyard-comments.html` file.
 
-3. Do real installation step 4 below, i.e. start including that file.
+3. Do real installation step 4 below, i.e. start including that file. **Restart** Jekyll afterwards.
 
 Now, regenerate your blog and look at the comment section that should appear below the blog posts. You can post test comments **but** they'll disappear later on, some day. Currently the comment section background color is always white, but later on you'll be able to tweak how it looks.
 
@@ -54,8 +52,6 @@ If you like it, then do real installation step 1 below, and step 2 again — and
 <br>
 
 ### Real installation
-
-**WAIT** a week — I'm renaming everything from EffectiveDiscussions to Talkyard. Scripts and links might be broken, until I'm done. Today is 2018-01-15. **/Wait.**
 
 Install this commenting system in four steps:
 
@@ -105,7 +101,7 @@ Install this commenting system in four steps:
 5. Optionally, add a frontmatter `discussion_id: per-discussion-id` to your blog posts / articles.
    Then, you can change the URL to a blog post, without the discussion disappearing.
 
-Now, restart Jekyll and reload a blog post in the browser. Do you see a comments section now?
+Now, **restart Jekyll** and reload a blog post in the browser. Do you see a comments section now?
 If so, remove TEST001 above. If not — do you see TEST001? If you *do* see TEST001 but not the comments,
 then ask for help, see below. If you don't see TEST001, you added the comments code at the wrong place,
 or you're looking at the wrong page.

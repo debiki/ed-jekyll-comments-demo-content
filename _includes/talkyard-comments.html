@@ -1,0 +1,19 @@
+{% if site.talkyard_comments_server_url %}
+
+{% capture script_url %}{%
+  if site.talkyard_comments_script_url %}{{
+    site.talkyard_comments_script_url }}{%
+  else %}{{
+    'https://tyc-49f8.kxcdn.com/-/talkyard-comments.min.js' }}{%
+  endif %}{%
+endcapture %}
+
+<script>talkyardCommentsServerUrl='{{ site.talkyard_comments_server_url }}';</script>
+<script async defer src="{{ script_url }}"></script>
+<div class="talkyard-comments" data-discussion-id="{{ page.discussion_id }}" style="margin-top: 45px;">
+<noscript>Please enable Javascript to view comments.</noscript>
+<p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
+<a href="https://www.talkyard.io">Talkyard</a>.</p>
+</div>
+
+{% endif %}

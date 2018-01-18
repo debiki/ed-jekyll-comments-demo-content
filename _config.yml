@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: A commenting system for Jekyll
+title: 'Talkyard: A commenting system for Jekyll'
 email: your-email@example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -26,7 +26,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
-ed_comments_server_url: https://comments-for-jekyll-comments-demo.ed.community
+talkyard_comments_server_url: https://comments-for-jekyll-comments-demo.talkyard.io
 
 
 # Exclude from processing.
