@@ -5,9 +5,11 @@ date:   2018-01-09 07:00:00 +0000
 discussion_id: demo-and-inst-instrs
 ---
 
-Talkyard is a new commenting system for Jekyll and other static site generators. It's [open source](https://github.com/debiki/ed-server/) so you can install it for free on your own server. There's hosting too, if you don't want to maintain your own server. No ads, no tracking. Lightweight, just 140 kb javascript (in comparison to Disqus' about 750 kb).
+Talkyard is a new commenting system for Jekyll and other static site generators. It's [open source](https://github.com/debiki/ed-server/) so you can install it for free on your own server. There's [hosting](https://www.talkyard.io), if you don't want to maintain your own server. No ads, no tracking. Lightweight, just 140 kb javascript (compare with Disqus, about 750 kb).
 
 This website is a static Jekyll blog, with Talkyard comments below each blog post — look at the bottom of the pages.
+Talkyard is forum software too, with chat and Q&A features —
+so you can create a community for your website, integrated with the blog comments.
 
 Demo video:
 
@@ -71,7 +73,7 @@ Install this commenting system in four steps:
    {% if site.talkyard_comments_server_url %}
    {% capture script_url %}{%
      if site.talkyard_comments_script_url %}{{ site.talkyard_comments_script_url }}{%
-     else %}{{ 'https://tyc-49f8.kxcdn.com/-/talkyard-comments.min.js' }}{%
+     else %}{{ 'https://cdn.talkyard.io/-/talkyard-comments.min.js' }}{%
      endif %}{%
    endcapture %}
 
@@ -105,6 +107,9 @@ Now, **restart Jekyll** and reload a blog post in the browser. Do you see a comm
 If so, remove TEST001 above. If not — do you see TEST001? If you *do* see TEST001 but not the comments,
 then ask for help, see below. If you don't see TEST001, you added the comments code at the wrong place,
 or you're looking at the wrong page.
+
+Again, note that Talkyard also is forum software, with chat and Q&A features —
+so you can create a community for your website, integrated with the blog comments.
 
 You can ask for help in [the support forum][support-cat], and [suggest ideas][ideas-cat].
 Or post a comment below on this page (test comments are fine too).
