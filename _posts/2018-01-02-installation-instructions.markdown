@@ -38,7 +38,7 @@ Here're 3 quick steps for you to try out Talkyard:
 1. Add this to your `_config.yml` file:
 
    ```
-   talkyard_comments_server_url: https://comments.demo.talkyard.io
+   talkyard_comments_server_url: https://comments-demo.talkyard.io
    ```
 
 2. Do real installation step 3 below, i.e. add the `_includes/talkyard-comments.html` file.
@@ -73,7 +73,7 @@ Install this commenting system in four steps:
    {% if site.talkyard_comments_server_url %}
    {% capture script_url %}{%
      if site.talkyard_comments_script_url %}{{ site.talkyard_comments_script_url }}{%
-     else %}{{ 'https://cdn.talkyard.io/-/talkyard-comments.min.js' }}{%
+     else %}{{ 'https://cdn.talkyard.net/-/talkyard-comments.min.js' }}{%
      endif %}{%
    endcapture %}
 
