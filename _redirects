@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+https://jekyll-comments.demo.ed.community/* https://jekyll-demo.talkyard.io/:splat 301!
+http://jekyll-comments.demo.ed.community/* https://jekyll-demo.talkyard.io/:splat 301!
+# only 97% certain that I'll want to use jekyll-demo not jekyll.demo, so use temp redir, code 302:
+https://jekyll.demo.talkyard.io/* https://jekyll-demo.talkyard.io/:splat 302!
+http://jekyll.demo.talkyard.io/* https://jekyll-demo.talkyard.io/:splat 302!

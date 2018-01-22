@@ -28,6 +28,8 @@ plugins:
 
 talkyard_comments_server_url: https://comments-for-jekyll-comments-demo.talkyard.io
 
+include:
+  - _redirects
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
