@@ -5,10 +5,14 @@ date:   2018-01-09 07:00:00 +0000
 discussion_id: demo-and-inst-instrs
 ---
 
-Talkyard is a new commenting system for Jekyll and other static site generators. It's [open source](https://github.com/debiki/ed-server/) so you can install it for free on your own server. There's [hosting](https://www.talkyard.io), if you don't want to maintain your own server. No ads, no tracking. Lightweight, just 140 kb javascript (compare with Disqus, about 750 kb).
+Talkyard is a new commenting system for Jekyll and other static site generators.
+It's Disqus alternative — but [open source](https://github.com/debiki/ed-server/)
+so you can install it for free on your own server.
+There's [hosting](https://www.talkyard.io) too for €3, so you don't need a server.
+Lightweight, just 140 kb javascript (compare with Disqus, about 750 kb).
 
 This website is a static Jekyll blog, with Talkyard comments below each blog post — look at the bottom of the pages.
-Talkyard is forum software too, with chat and Q&A features —
+Talkyard is forum software too, with chat and question-answers features —
 so you can create a community for your website, integrated with the blog comments.
 
 Demo video:
@@ -47,7 +51,7 @@ Here're 3 quick steps for you to try out Talkyard:
 
 Now, regenerate your blog and look at the comment section that should appear below the blog posts. You can post test comments **but** they'll disappear later on, some day. Currently the comment section background color is always white, but later on you'll be able to tweak how it looks.
 
-Are you satisfied with how it looks? If not, please tell us/me: <https://www.talkyard.io/forum/latest/support>.
+Are you satisfied with how it looks? If not, you can "complain": <https://www.talkyard.io/forum/latest/support>, maybe we can make it look better.
 
 If you like it, then do real installation step 1 below, and step 2 again — and this time, specify the address to your own Talkyard site. (Skip step 3 and 4, you've done them already.)
 <br>
