@@ -38,7 +38,7 @@ Here're 3 quick steps for you to try out Talkyard:
 1. Add this to your `_config.yml` file:
 
    ```
-   talkyard_comments_server_url: https://comments-demo.talkyard.io
+   talkyard_server_url: https://comments-demo.talkyard.io
    ```
 
 2. Do real installation step 3 below, i.e. add the `_includes/talkyard-comments.html` file.
@@ -63,21 +63,21 @@ Install this commenting system in four steps:
 2. In your Jekyll site configuration, i.e. `_config.yml`, add this config value and paste the address:
 
    ```
-   talkyard_comments_server_url: https://comments-for-your-site.talkyard.io
+   talkyard_server_url: https://comments-for-your-site.talkyard.io
    ```
 
 3. Create a file `_includes/talkyard-comments.html`: (TEST001 is intentional)
    {% raw %}
    ```
    TEST001
-   {% if site.talkyard_comments_server_url %}
+   {% if site.talkyard_server_url %}
    {% capture script_url %}{%
-     if site.talkyard_comments_script_url %}{{ site.talkyard_comments_script_url }}{%
+     if site.talkyard_script_url %}{{ site.talkyard_script_url }}{%
      else %}{{ 'https://cdn.talkyard.net/-/talkyard-comments.min.js' }}{%
      endif %}{%
    endcapture %}
 
-   <script>talkyardCommentsServerUrl='{{ site.talkyard_comments_server_url }}';</script>
+   <script>talkyardServerUrl='{{ site.talkyard_server_url }}';</script>
    <script async defer src="{{ script_url }}"></script>
    <div class="talkyard-comments" data-discussion-id="{{ page.discussion_id }}" style="margin-top: 45px;">
    <noscript>Please enable Javascript to view comments.</noscript>
