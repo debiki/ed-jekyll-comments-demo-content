@@ -5,15 +5,15 @@ date:   2018-01-09 07:00:00 +0000
 discussion_id: demo-and-inst-instrs
 ---
 
-Talkyard is a new commenting system for Jekyll and other static site generators.
-It's Disqus alternative — but [open source](https://github.com/debiki/ed-server/)
-so you can install it for free on your own server.
-There's [hosting](https://www.talkyard.io) too for €3, so you don't need a server.
-Lightweight, just 140 kb javascript (compare with Disqus, about 750 kb).
+Talkyard is a commenting system for Jekyll and other static site generators.
+It's a Disqus alternative, but [open source](https://github.com/debiki/talkyard/);
+you can install it for free on your own server.
+Or use our servereless [hosting](https://www.talkyard.io/blog-comments) — no ads, no tracking, free for low traffic blogs.
+<!-- Lightweight, just 140 kb javascript (compared with Disqus, about 750 kb). -->
 
-This website is a static Jekyll blog, with Talkyard comments below each blog post — look at the bottom of the pages.
-Talkyard is forum software too, with chat and question-answers features —
-so you can create a community for your website, integrated with the blog comments.
+This website is a Jekyll blog, with Talkyard blog comments — look at the bottom of the pages.
+Talkyard is forum software too, with chat and question-answers features:
+you can create a community for your website, integrated with the blog comments.
 
 Demo video:
 
@@ -27,17 +27,13 @@ Demo video:
 -->
 
 <br>
-<a href="/jekyll/update/2018/01/01/like-about-jekyll.html">Here's a demo Jekyll discussion.</a>
-
-<a href="https://www.kajmagnus.blog/new-embedded-comments">Longer demo discussion (the one in the video).</a>
+<a href="https://www.kajmagnus.blog/new-embedded-comments">Example discussion (the one in the video).</a>
 <br>
 <br>
 
 ### Quick test if this is for you
 
-Maybe you don't want to get a server and install, or sign up for our hosted service,
-just to find out if Talkyard works for your blog / website?
-Here're 3 quick steps for you to try out Talkyard:
+Three steps for trying out Talkyard, without signing up or getting your own server:
 
 1. Add this to your `_config.yml` file:
 
@@ -49,9 +45,9 @@ Here're 3 quick steps for you to try out Talkyard:
 
 3. Do real installation step 4 below, i.e. start including that file. **Restart** Jekyll afterwards.
 
-Now, regenerate your blog and look at the comment section that should appear below the blog posts. You can post test comments **but** they'll disappear later on, some day. Currently the comment section background color is always white, but later on you'll be able to tweak how it looks.
+Now, regenerate your blog and look at the comment section that should appear below the blog posts. You can post test comments **but** they'll disappear later on, some day.
 
-Are you satisfied with how it looks? If not, you can "complain": <https://www.talkyard.io/forum/latest/support>, maybe we can make it look better.
+Support forum here: <https://www.talkyard.io/forum/latest/support>
 
 If you like it, then do real installation step 1 below, and step 2 again — and this time, specify the address to your own Talkyard site. (Skip step 3 and 4, you've done them already.)
 <br>
@@ -61,13 +57,13 @@ If you like it, then do real installation step 1 below, and step 2 again — and
 
 Install this commenting system in four steps:
 
-1. Go to <https://www.talkyard.io> and click *Start a Community*, choose Blog Comments and type your website address.
+1. Go to <https://www.talkyard.io/plans>, chose *Blog comments* and type your website address.
    Copy the address to your new embedded comments site.
 
 2. In your Jekyll site configuration, i.e. `_config.yml`, add this config value and paste the address:
 
    ```
-   talkyard_server_url: https://comments-for-your-site.talkyard.io
+   talkyard_server_url: https://comments-for-your-site.talkyard.net
    ```
 
 3. Create a file `_includes/talkyard-comments.html`: (TEST001 is intentional)
@@ -77,7 +73,7 @@ Install this commenting system in four steps:
    {% if site.talkyard_server_url %}
    {% capture script_url %}{%
      if site.talkyard_script_url %}{{ site.talkyard_script_url }}{%
-     else %}{{ 'https://cdn.talkyard.net/-/talkyard-comments.min.js' }}{%
+     else %}{{ 'https://c1.ty-cdn.net/-/talkyard-comments.min.js' }}{%
      endif %}{%
    endcapture %}
 
@@ -112,11 +108,8 @@ If so, remove TEST001 above. If not — do you see TEST001? If you *do* see TEST
 then ask for help, see below. If you don't see TEST001, you added the comments code at the wrong place,
 or you're looking at the wrong page.
 
-Again, note that Talkyard also is forum software, with chat and Q&A features —
-so you can create a community for your website, integrated with the blog comments.
-
 You can ask for help in [the support forum][support-cat], and [suggest ideas][ideas-cat].
-Or post a comment below on this page (test comments are fine too).
+
 
 [support-cat]: https://www.talkyard.io/forum/latest/support
 [ideas-cat]: https://www.talkyard.io/forum/latest/ideas

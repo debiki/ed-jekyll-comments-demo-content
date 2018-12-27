@@ -26,7 +26,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
-talkyard_server_url: https://comments-for-jekyll-comments-demo.talkyard.io
+talkyard_server_url: https://comments-for-jekyll-demo.talkyard.net
 
 include:
   - _redirects
